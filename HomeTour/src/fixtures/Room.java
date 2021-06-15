@@ -21,6 +21,9 @@ public class Room extends Fixture{
 	}
 	
 	public Room getExit(int direction) {
+		if (exits[direction]== null) {
+			return this;
+		}
 		return exits[direction];
 	}
 	
