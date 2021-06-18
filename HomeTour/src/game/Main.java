@@ -238,7 +238,7 @@ public class Main {
 					break;
 				}
 				else if (player.getCurrentRoom().containsItem("Crusty Toilet")) {
-					System.out.println("The toilet is too groos even for " + player.getName() + " to use");
+					System.out.println("The toilet is too gross even for " + player.getName() + " to use");
 					System.out.println();
 					break;
 				}
@@ -359,7 +359,7 @@ public class Main {
 					System.out.println();
 					player.addToInventory("Mysterious Book");
 					player.getCurrentRoom().removeItem("Mysterious Book");
-					player.getCurrentRoom().setLongDescription("The library is even more of a ruin now. The remains of the bookshelf scattered across the floor are all thats left of the old library.");
+					player.getCurrentRoom().setLongDescription("The library is even more of a ruin now. The shattered bits of wood scattered across the floor are all thats left of the once magnificent bookshelf.");
 					break;
 				} else {
 					System.out.println("There is no book to take");
