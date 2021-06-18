@@ -17,7 +17,7 @@ public class RoomManager {
 		Room livingroom = new Room("LivingRoom", "A Cozy Living Room", "This old room must have been a wonderful place. The magnificent fireplace is really ties the room together", false);
 		Room library = new Room("Library", "An Old Library", "A massive bookcase dominates the room, there must have been hundreds of books here once", false);
 		Room diningroom = new Room("DiningRoom", "A Lavish DiningRoom", "A grand dining table takes center stage in the room. It must be big enough to seat thrity people.", false);
-		Room groundBath = new Room("Bathroom", "A Modest Half-BAth", "a normal looking bathroom... just a littlle bit old", false);
+		Room groundBath = new Room("Bathroom", "A Modest Half-BAth", "a normal looking bathroom... just a little bit old", false);
 		Room kitchen = new Room("Kitchen", "A Full Kitchen", "Pots and Pans, knives anf forks, cabinets as far as the eye can see... this kitchen could probably feed a whole army", false);
 		Room garden = new Room("Garden", "A Lush Garden", "The garden may be the only part of the old house flourishing. Plants sprout from everywhere, and a massive apple tree sprouts out of the once strictly maintained garden",false);
 		Room toolShed = new Room("Shed", "A Crumbling Shed", "The shed is barely standing. The wood is rotting, and it looks like a gentle breeze might blow the whole thing over.", false);
