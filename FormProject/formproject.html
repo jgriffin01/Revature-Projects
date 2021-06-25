@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head style="margin-left: 0px;">
+    <title style=>Ultimate Basketball Sign-Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="formstyles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  </head>
+  <body style="background-color: tan;">
+    <div class="container">
+      <div class="row">
+        <h1 style="text-align: center;margin: 4rem;">The Ultimate Basketball League</h1>
+      </div>
+      <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8">
+          <p>The Ultimate Basketball League is a League for everyone passionate about Basketball. We Friday every week and our season culminates in our famous playoffs. If your interested sign up down below.</p>
+          <h4 style="text-align: center;">Sign Up Now</h4>
+          <form method="POST" action="/registration">
+            <div style="margin-bottom: 2rem;margin-top: 2rem;"class="input-group">
+              <span class="input-group-text">Name</span>
+              <input id="firstname" type="text" placeholder="First" aria-label="First name" class="form-control">
+              <input id="lastname" type="text" placeholder="Last" aria-label="Last name" class="form-control">
+            </div>
+            <div style="margin-bottom: 2rem;" class="input-group">
+              <span class="input-group-text">Address</span>
+              <input id="street" style="width: 30%" type="text" placeholder="Street Address" aria-label="Street Address" class="form-control">
+              <input id="city" style="width: 20%" type="text" placeholder="City" aria-label="City" class="form-control">
+              <input id="zip" style="width: 10%" type="number" placeholder="Zip Code" aria-label="Zip Code" class="form-control">
+              <input id="state" style="width: 10%" type="text" placeholder="State" aria-label="State" class="form-control">
+            </div>
+            <div style="margin-bottom: 2rem;" class="input-group">
+              <span class="input-group-text">Email</span>
+              <input id="email" type="text" aria-label="Email" class="form-control">
+            </div>
+            <div class="row">
+              <div style="width: 30%;" class="input-group">
+                <span class="input-group-text">Age</span>
+                <input id="age" type="number" aria-label="Age" class="form-control">
+              </div>
+              <select id="position" class="form-select form-select-sm" aria-label=".form-select-sm example" style="width: 30% ;margin-left: 2.7rem;margin-right: 2.7rem;">
+                <option selected>Select Position</option>
+                <option value="PG">Point Guard</option>
+                <option value="SG">Shooting Guard</option>
+                <option value="SF">Small Forward</option>
+                <option value="PF">Power Forward</option>
+                <option value="C">Center</option>
+              </select>
+              <div style="width: 30%;" class="input-group">
+                <span class="input-group-text">Height</span>
+                <input placeholder="Feet.Inches" type="number" aria-label="Height" class="form-control">
+              </div> 
+              <div>
+                <button style="margin: 2rem;" type="submit" onclick="submitForm()">Submit</button>
+              </div> 
+            </div>          
+          </form>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+
+    <script>
+
+      function submitForm() {
+        var name = document.querySelector('#firstname').value + ' ' + document.querySelector('#lastname').value
+        var address = document.querySelector('#street').value + ' ' + document.querySelector('#city').value + ' ' + document.querySelector('#zip').value + ' ' + document.querySelector('#state').value
+        var email = document.querySelector('#email').value
+        var age = document.querySelector('#age').value
+        var position = document.querySelector('#position').value
+
+        console.log(name + ' ' + address + ' ' + email + ' ' + age + ' ' + position)
+			}
+    </script>
+
+  </body>
+</html>
