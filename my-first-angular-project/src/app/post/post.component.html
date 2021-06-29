@@ -1,0 +1,25 @@
+<div style="border: dashed;">
+	<h4 style="padding-top: 2rem;padding-left: 2rem;">
+		{{postTitle}}
+		<button (click)="hide()" style="text-align: right;">{{buttonText}}</button>
+	</h4>
+	<p style="visibility:{{visibleText}};padding-bottom: 2rem;padding-left: 2rem;padding-right: 2rem;">{{description}}</p>
+</div>
+
+
+<!-- bootstrap attempt -->
+<!--
+<div class="panel-group">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+		<h4 class="panel-title">
+		  <a data-toggle="collapse" href="#collapse1">{{postTitle}}</a>
+		  <button (click)="hide()">{{buttonText}}</button>
+		</h4>
+	  </div>
+	  <div id="collapse1" class="panel-collapse collapse">
+		<div class="panel-body">{{description}}</div>
+	  </div>
+	</div>
+  </div>
+-->
