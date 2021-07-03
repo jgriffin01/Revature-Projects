@@ -1,0 +1,37 @@
+<!--
+<div style="border: dashed;width: 40%;margin: 2rem;padding: 2rem;display: inline-block;">
+	<h2>{{itemName}}</h2>
+	<p>This WONDERFUL {{itemName}} could be yours for only ${{itemPrice}}!</p>
+	<p>Price: ${{itemPrice}}</p>
+	<div *ngIf="favorite; else elseBlock"><button style="margin-right: 2rem;" (click)="toggleFavorite()">Favorite</button><button (click)="addToCart()">Add to Cart</button></div>
+	<ng-template #elseBlock><button style="background-color: yellow;margin-right: 2rem;" (click)="toggleFavorite()">Favorite</button><button (click)="addToCart()">Add to Cart</button></ng-template>
+</div>
+-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<!--
+<select (change)="filterItems($event)">
+	<option>All Items</option>
+	<option>Electronics</option>
+	<option>Furniture</option>
+	<option>Appliances</option>
+	<option>Vehicles</option>
+</select>
+-->
+
+<select (change)="filterItems($event)" class="form-select form-select-sm" aria-label=".form-select-sm example" style="width: 83.5%;">
+  <option selected>All Items</option>
+  <option>Electronics</option>
+  <option>Appliances</option>
+  <option>Furniture</option>
+  <option>Vehicles</option>
+  <option>Favorites</option>
+</select>
+
+<div style="border: dashed;width: 40%;margin-right: 2rem;margin-top: 2rem; padding: 2rem;display: inline-block;" [ngClass]="{favorite:i.fav}" *ngFor="let i of items">
+	<h2>{{i.name}}</h2>
+	<p>This WONDERFUL {{i.name}} could be your for only ${{i.price}}!</p>
+	<p>Price: {{i.price}}</p>
+	<button (click)="toggleFavorite(i)">Favorite</button>
+	<button (click)="addToCart(i)" style="margin-left: 4rem;">Add to Cart</button>
+</div>

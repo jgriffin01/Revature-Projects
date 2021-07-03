@@ -1,0 +1,22 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<div *ngFor="let i of items">
+    <div *ngIf="i.quantity > 0">
+        <h4 style="display: inline-flex">{{i.name}}</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <span>{{i.price}} X ({{i.quantity}}) = {{i.price * i.quantity}}</span>
+                </div>
+                <div class="col-6">
+                    <button (click)="increment(i)">Add</button>
+                    <button style="margin-left: 2rem;" (click)="decrement(i)">Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h4>------------------------------------------</h4>
+<h6>Sub-Total: {{subTotal}}</h6>
+<h6>Taxes: {{subTotal * 0.053}}</h6>
+<h4>Total: {{subTotal + (subTotal * 0.053)}}</h4>
